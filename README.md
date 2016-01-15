@@ -1,9 +1,9 @@
 # Forkel OpenGraph
 A Facebook "What's on your mind?" clone. This module shows you, how you can fetch OpenGraph data base on a URL from a textarea field. This module is for experimental purposes.
 
-![Forkel OpenGraph  - Preview](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/preview.jpg)
-
 ![Forkel OpenGraph  - Video](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/video.gif)
+
+![Forkel OpenGraph  - Preview](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/preview.gif)
 
 ## Installation
 1. Pull the code.

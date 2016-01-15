@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Forkel_OpenGraph>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Forkel_OpenGraph>
+    </modules>
+</config>

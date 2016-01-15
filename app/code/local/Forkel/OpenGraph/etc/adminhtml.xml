@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Forkel OpenGraph
+ *
+ * @category    Forkel
+ * @package     Forkel_OpenGraph
+ * @copyright   Copyright (c) 2016 Tobias Forkel (http://www.tobiasforkel.de)
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+ -->
+
+<config>
+    <menu>
+        <forkel translate="title" module="forkel_opengraph">
+            <title>Forkel</title>
+            <sort_order>300</sort_order>
+            <children>
+                <opengraph>
+                    <title>OpenGraph</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/forkel_opengraph_entity/index</action>
+                </opengraph>
+            </children>
+        </forkel>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <forkel translate="title" module="forkel_opengraph">
+                        <title>Forkel</title>
+                        <sort_order>300</sort_order>
+                        <children>
+                            <opengraph>
+                                <title>OpenGraph</title>
+                                <sort_order>10</sort_order>
+                            </opengraph>
+                        </children>
+                    </forkel>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

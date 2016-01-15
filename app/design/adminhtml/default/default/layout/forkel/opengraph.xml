@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_forkel_opengraph_entity_index>
+        <reference name="content">
+            <block type="forkel_opengraph/adminhtml_entity" name="forkel_opengraph_entity" />
+            <block type="forkel_opengraph/adminhtml_thankyou" name="forkel_opengraph_adminhtml_thankyou" template="forkel/opengraph/adminhtml/thankyou.phtml" />
+
+        </reference>
+    </adminhtml_forkel_opengraph_entity_index>
+    <adminhtml_forkel_opengraph_entity_edit>
+        <reference name="head">
+            <action method="addJs"><script>local/forkel/opengraph/jquery-2.2.0.min.js</script></action>
+            <action method="addJs"><script>local/forkel/opengraph/init.js</script></action>
+        </reference>
+        <reference name="content">
+            <block type="forkel_opengraph/adminhtml_js_init" name="forkel_opengraph_adminhtml_js_init" template="forkel/opengraph/adminhtml/js/init.phtml" />
+        </reference>
+    </adminhtml_forkel_opengraph_entity_edit>
+    <adminhtml_forkel_opengraph_entity_ajax>
+        <reference name="content">
+            <block type="forkel_opengraph/adminhtml_ajax" name="forkel_opengraph_ajax" />
+        </reference>
+    </adminhtml_forkel_opengraph_entity_ajax>
+</layout>

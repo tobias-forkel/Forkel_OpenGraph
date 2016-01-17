@@ -1,9 +1,11 @@
 # Forkel OpenGraph
 A Facebook "What's on your mind?" clone. This module shows you, how you can fetch OpenGraph data base on a URL from a textarea field. This module is for experimental purposes.
 
-![Forkel OpenGraph  - Video](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/video.gif)
+![Forkel OpenGraph - Frontend - Video](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/preview/frontend/video.gif)
 
-![Forkel OpenGraph  - Preview](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/preview.gif)
+![Forkel OpenGraph - Frontend - Preview](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/preview/frontend/1.gif)
+
+![Forkel OpenGraph - Backend - Preview](https://raw.githubusercontent.com/tobias-forkel/Forkel_OpenGraph/master/preview/backend/1.gif)
 
 ## Installation
 1. Pull the code.
@@ -32,9 +34,12 @@ If you have any issues with this extension, open an issue on [Github](https://gi
 5. Submit a pull request.
 6. Get a free Twitter post with a link to your portfolio or project.
 
-If you need a custom build, just contact me on http://www.tobiasforkel.de. Follow me on [GitHub](https://github.com/tobias-forkel) and [Twitter](https://twitter.com/tobiasforkel). If I was able to help you, please [PayPal](https://www.paypal.me/TobiasForkel) me that I can buy something to eat.
+If you need a custom build, just contact me on http://www.tobiasforkel.de. Follow me on [GitHub](https://github.com/tobias-forkel) and [Twitter](https://twitter.com/tobiasforkel).
 
 ## History
+===== 1.1.0 =====
+* Added opengraph data fetch in frontend {baseurl}/forkel_opengraph/
+
 ===== 1.0.0 =====
 * Initial version of this module
 

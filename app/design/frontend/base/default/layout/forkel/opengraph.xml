@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout>
+
+    <!-- start : forkel opengraph - frontend form -->
+
+    <forkel_opengraph_index_index translate="label" module="forkel_opengraph">
+        <reference name="head">
+            <action method="addJs"><script>local/forkel/opengraph/jquery-2.2.0.min.js</script></action>
+            <action method="addJs"><script>local/forkel/opengraph/init.js</script></action>
+            <block type="forkel_opengraph/frontend_js_init" name="forkel_opengraph_frontend_js_init" template="forkel/opengraph/js/init.phtml" />
+        </reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="forkel_opengraph/frontend_form" name="forkel_opengraph_frontend_form">
+                <action method="setTemplate">
+                    <template>forkel/opengraph/form.phtml</template>
+                </action>
+            </block>
+            <block type="forkel_opengraph/donate" name="forkel_opengraph_donate" template="forkel/opengraph/donate.phtml" />
+        </reference>
+    </forkel_opengraph_index_index>
+
+    <!-- end : forkel opengraph - frontend form -->
+
+</layout>

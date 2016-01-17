@@ -68,8 +68,7 @@ class Forkel_OpenGraph_Block_Adminhtml_Entity_Edit_Form extends Mage_Adminhtml_B
             'label'     => $this->__('Comment'),
             'title'     => $this->__('Comment'),
             'style'     => 'height: 70px;',
-            'class'     => 'forkel_opengraph_ajax',
-            'note'      => 'Enter your text and paste a URL to fetch the OpenGraph data.'
+            'note'      => 'Enter text with a URL to fetch OpenGraph data.'
         ]);
 
         $fieldset->addField('title', 'text', [
@@ -94,6 +93,14 @@ class Forkel_OpenGraph_Block_Adminhtml_Entity_Edit_Form extends Mage_Adminhtml_B
             'name'      => 'image',
             'label'     => $helper->__('Image'),
             'title'     => $helper->__('Image')
+        ]);
+
+        $fieldset->addType('container', 'Forkel_OpenGraph_Block_Adminhtml_Entity_Renderer_Fieldset_Container');
+
+        $fieldset->addField('container', 'container', [
+            'name'      => 'type',
+            'label'     => $this->__('Container'),
+            'title'     => $this->__('Container'),
         ]);
 
         $form->setValues($model->getData());

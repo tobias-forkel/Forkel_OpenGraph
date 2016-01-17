@@ -1,0 +1,60 @@
+<?php $helper = Mage::helper(Forkel_OpenGraph_Helper_Data::MODULE_KEY); ?>
+
+<div class="page-title">
+    <h1><?php echo $helper->__('Forkel OpenGraph') ?></h1>
+</div>
+<form id="forkel_opengraph" action="<?php echo $this->getUrl('forkel_opengraph/index/save/') ?>" method="post" id="form-validate" autocomplete="off">
+    <div class="fieldset">
+        <?php echo $this->getBlockHtml('formkey')?>
+        <input type="hidden" name="ajax_url" value="<?php echo $this->getUrl('forkel_opengraph/index/ajax'); ?>">
+
+        <h2 class="legend"><?php echo $helper->__('Comment') ?></h2>
+        <ul class="form-list">
+
+            <li class="wide">
+                <div class="input-box">
+                    <textarea title="<?php echo $helper->__('Your Comment') ?>" class="input-text required" name="comment" id="comment"><?php echo $helper->__('Gluten-free mumblecore chambray schlitz paleo distillery tofu meditation, lo-fi skateboard gochujang fap. Slow-carb gastropub asymmetrical, ethical brunch affogato kale chips taxidermy cold-pressed scenester bespoke lo-fi hammock plaid lomo.'); ?></textarea>
+                </div>
+            </li>
+
+            <li class="fields hidden">
+                <div>
+                    <div class="field">
+                        <label for="title" class="required"><?php echo $helper->__('Title') ?></label>
+                        <div class="input-box">
+                            <input type="text" id="title" name="title" placeholder="" value="" title="Title" maxlength="255" class="input-text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="description" class="required"><?php echo $helper->__('Description') ?></label>
+                        <div class="input-box">
+                            <input type="text" id="description" name="description" placeholder="" value="" title="Description" maxlength="255" class="input-text">
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="fields hidden">
+                <div>
+                    <div class="field">
+                        <label for="url" class="required"><?php echo $helper->__('Url') ?></label>
+                        <div class="input-box">
+                            <input type="text" id="url" name="url" placeholder="" value="" title="Url" maxlength="255" class="input-text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="image" class="required"><?php echo $helper->__('Image') ?></label>
+                        <div class="input-box">
+                            <input type="text" id="image" name="image" placeholder="" value="" title="Image" maxlength="255" class="input-text">
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="wide hidden">
+                <div id="container"></div>
+            </li>
+
+        </ul>
+    </div>
+</form>

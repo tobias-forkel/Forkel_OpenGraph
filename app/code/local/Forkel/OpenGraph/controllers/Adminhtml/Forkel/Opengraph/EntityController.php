@@ -8,8 +8,6 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
-require_once(Mage::getBaseDir('lib') . DS . 'OpenGraph/OpenGraph.php');
-
 class Forkel_OpenGraph_Adminhtml_Forkel_OpenGraph_EntityController extends Mage_Adminhtml_Controller_Action
 {
     protected $_model = Forkel_OpenGraph_Helper_Data::MODEL_ENTITY;
@@ -44,31 +42,10 @@ class Forkel_OpenGraph_Adminhtml_Forkel_OpenGraph_EntityController extends Mage_
 
         if ($postData = $this->getRequest()->getPost())
         {
-            // Storage for AJAX response
-            $response = [];
-
-            // Receive comment field from admin panel
+            // Values from comment field
             $comment = $postData['comment'];
 
-            // Extract URL from comment string
-            preg_match('/(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/', $comment, $matches);
-
-            if (!filter_var($matches[0], FILTER_VALIDATE_URL) === false)
-            {
-                // Fetch OpenGraph data
-                $opengraph = OpenGraph::fetch($matches[0]);
-
-                $keys = $opengraph->keys();
-
-                // Save OpenGraph data in $response
-                if (count($keys) > 0)
-                {
-                    foreach ($keys as $key)
-                    {
-                        $response[$key] = $opengraph->__get($key);
-                    }
-                }
-            }
+            $response = $this->hlpr()->getUrl($comment);
         }
 
         $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($response));

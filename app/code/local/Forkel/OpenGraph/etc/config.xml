@@ -13,7 +13,7 @@
 <config>
     <modules>
         <Forkel_OpenGraph>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
         </Forkel_OpenGraph>
     </modules>
     <global>
@@ -69,4 +69,22 @@
             </updates>
         </layout>
     </adminhtml>
+    <frontend>
+        <routers>
+            <forkel_opengraph>
+                <use>standard</use>
+                <args>
+                    <module>Forkel_OpenGraph</module>
+                    <frontName>forkel_opengraph</frontName>
+                </args>
+            </forkel_opengraph>
+        </routers>
+        <layout>
+            <updates>
+                <forkel_opengraph>
+                    <file>forkel/opengraph.xml</file>
+                </forkel_opengraph>
+            </updates>
+        </layout>
+    </frontend>
 </config>
